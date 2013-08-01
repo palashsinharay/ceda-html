@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
-                padding-top: 125px;
+/*                padding-top: 125px;*/
                 padding-bottom: 40px;
             }
         </style>
@@ -23,8 +23,10 @@
         <link rel="stylesheet" href="css/font-awesome.min.css">
       
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/camera.css">
+
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap-magnify.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -33,7 +35,7 @@
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-static-top">
             <div class="navbar-inner">
                 <div class="container">
                     <div class="row">
@@ -41,10 +43,10 @@
                         <a class="brand" href="#"><img src="img/ceda.png" alt="logo"></a>
                     </div>    
                     <div class="span6 text-center header-text">LEADING PROGRAMMING AND MEASUREMENT SOLUTIONS</div>
-                    <div class="span3 pull-right">
+                    <div class="span2 pull-right">
                             <div id="google_translate_element" ></div><script type="text/javascript">
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
@@ -304,13 +306,29 @@ function googleTranslateElementInit() {
                 <div class="span8">
                     <div class="row">
                         <div class="span8">
-                               <div class="span8">
+                               
                                    <div class="span3">
-                                    <a class="pull-left" href="#">
-                                    <h4 class="media-heading">Media heading</h4></a>
+<!--                                    <a class="pull-left" href="#">
+                                    <h4 class="media-heading">Media heading</h4></a>-->
+              <div class="media cont">                     
+                <img id="1b" src="http://www.professorcloud.com/images/zoomengine/bigimage00.jpg" />
+                <img id="2b" src="http://www.professorcloud.com/images/zoomengine/bigimage01.jpg" />
+                <img id="3b" src="http://www.professorcloud.com/images/zoomengine/bigimage02.jpg" />
+                </div>
+                <div class="zoomthumb">
+                
+                    <img id="1" src="img/tinyimag.jpg"/>
+                
+                
+                    <img id="2" src="img/tinyimah.jpg"/>
+                                 
+                
+                    <img id="3" src="img/tinyimai.jpg"/>
+                
+                </div>
 <!--                                    <img class="media-object" src="img/product.jpg">-->
 <!--start product slider -->
-<div class="container-fluid">
+<!--<div class="container-fluid">
     	
         <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
             <div data-thumb="img/slides/thumbs/bridge.jpg" data-src="img/slides/bridge.jpg">
@@ -340,7 +358,7 @@ function googleTranslateElementInit() {
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 <!--end product slider-->
 
                                
@@ -362,8 +380,7 @@ function googleTranslateElementInit() {
                                        <button class="btn btn-inverse pull-right">Add To Cart</button>
                                        
                                 </div>
-                                <hr>
-                                </div>
+                                
                                
                                
                             
@@ -461,11 +478,15 @@ function googleTranslateElementInit() {
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script type='text/javascript' src='js/jquery.min.js'></script>
+        <!--camera gallary-->
+<!--        <script type='text/javascript' src='js/jquery.min.js'></script>
         <script type='text/javascript' src='js/jquery.mobile.customized.min.js'></script>
     <script type='text/javascript' src='js/jquery.easing.1.3.js'></script> 
-    <script type='text/javascript' src='js/camera.min.js'></script> 
-
+    <script type='text/javascript' src='js/camera.min.js'></script> -->
+        <!--camera gallary end-->
+        
+        
+        <script src="js/bootstrap-magnify.min.js"></script>
         <script src="js/main.js"></script>
 
         <script>
@@ -475,16 +496,24 @@ function googleTranslateElementInit() {
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
         <script>
+            
     $(function () {
     $('#myTab a:first').tab('show');
+//    $('.cont img#1b').hide(); 
+    $('.cont img#2b').hide(); 
+    $('.cont img#3b').hide();
+    $('.cont img').magnify();
     
-    jQuery('#camera_wrap_1').camera({
-				thumbnails: true,
-                                loader: 'bar',
-                                playPause: false
-			});
+                $('.zoomthumb img').click( function(){
+                    var t = $(this).attr("id")
+                    $('.cont img#1b').hide(); 
+                    $('.cont img#2b').hide(); 
+                    $('.cont img#3b').hide(); 
+                    $('.cont img#'+t+'b').show();  
+                });
     })
-        $('#myTab a').click(function (e) {
+    
+    $('#myTab a').click(function (e) {
     e.preventDefault();
     $(this).tab('show');
     })
