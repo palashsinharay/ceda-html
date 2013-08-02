@@ -13,8 +13,9 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
-                padding-top: 125px;
+/*                padding-top: 125px;*/
                 padding-bottom: 40px;
+                background: url("img/gradient.png") repeat-x scroll 0 0 #FCF9F3;
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-responsive.css">
@@ -23,7 +24,10 @@
         <link rel="stylesheet" href="css/font-awesome.min.css">
       
         <link rel="stylesheet" href="css/main.css">
+
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap-magnify.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -32,7 +36,7 @@
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-static-top">
             <div class="navbar-inner">
                 <div class="container">
                     <div class="row">
@@ -40,10 +44,10 @@
                         <a class="brand" href="#"><img src="img/ceda.png" alt="logo"></a>
                     </div>    
                     <div class="span6 text-center header-text">LEADING PROGRAMMING AND MEASUREMENT SOLUTIONS</div>
-                    <div class="span3 pull-right">
+                    <div class="span2 pull-right">
                             <div id="google_translate_element" ></div><script type="text/javascript">
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
@@ -302,75 +306,87 @@ function googleTranslateElementInit() {
             <div class="row">
                 <div class="span8">
                     <div class="row">
-                        <div class="span7">
-                               <div class="media">
-                                <a class="pull-left" href="#">
-                                     <h4 class="media-heading">Media heading</h4>
-                                    <img class="media-object" src="img/product.jpg">
-                                </a>
-                                
-                                <div class="media-body well">
-                                       <span class="label">Price</span>
+                        <div class="span8">
+                               
+                                   <div class="span3">
+<!--                                    <a class="pull-left" href="#">
+                                    <h4 class="media-heading">Media heading</h4></a>-->
+              <div class="media cont">                     
+                <img id="1b" src="http://www.professorcloud.com/images/zoomengine/bigimage00.jpg" />
+                <img id="2b" src="http://www.professorcloud.com/images/zoomengine/bigimage01.jpg" />
+                <img id="3b" src="http://www.professorcloud.com/images/zoomengine/bigimage02.jpg" />
+                </div>
+                <div class="zoomthumb">
+                
+                    <img id="1" src="img/tinyimag.jpg"/>
+                
+                
+                    <img id="2" src="img/tinyimah.jpg"/>
+                                 
+                
+                    <img id="3" src="img/tinyimai.jpg"/>
+                
+                </div>
+<!--                                    <img class="media-object" src="img/product.jpg">-->
+<!--start product slider -->
+<!--<div class="container-fluid">
+    	
+        <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+            <div data-thumb="img/slides/thumbs/bridge.jpg" data-src="img/slides/bridge.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Front view
+                </div>
+            </div>
+            <div data-thumb="img/slides/thumbs/leaf.jpg" data-src="img/slides/leaf.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    side view
+                </div>
+            </div>
+            <div data-thumb="img/slides/thumbs/road.jpg" data-src="img/slides/road.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    back view
+                </div>
+            </div>
+            <div data-thumb="img/slides/thumbs/sea.jpg" data-src="img/slides/sea.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    left view
+                </div>
+            </div>
+            
+            <div data-thumb="img/slides/thumbs/tree.jpg" data-src="img/slides/tree.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    right view
+                </div>
+            </div>
+        </div>
+    </div>-->
+<!--end product slider-->
+
+                               
+                                </div>
+                                <div class="media-body well span4">
+                                       <span class="label">Price :</span>
                                        <h5 class="offset1" style="display:inline;">US $44,000</h5>
-                                       <button class="btn btn-inverse pull-right">buy</button>
                                        <br>
-                                       <br>
-                                       <a href="#" class="pull-right">crm.pdf</a>
                                        <br>
                                        <span class="label">Payment :</span>
                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                        <span class="label">Shipping :</span>
                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                        
-                                                                              <span class="badge badge-inverse">Download Catalog</span>
-
+                                       <span class="badge badge-inverse">Catalog</span><span class="offset1"><img src="img/pdf_icon.png"/></span>
+                                       <br><br>
+                                       <span class="badge badge-inverse">Stock:  54</span>
+                                       <br><br>
+                                       <button class="btn btn-inverse pull-right">Add To Cart</button>
                                        
                                 </div>
-                                <hr>
-                                </div>
+                                
                                
                                
-                            <!-- Modal -->
-                            <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h3 id="myModalLabel">Modal header</h3>
-                            </div>
-                            <div class="modal-body">
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                            </div>
-                            <div class="modal-footer">
-                            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                            <button class="btn btn-primary">Product details</button>
-                            </div>
-                            </div>
+                            
                         </div>
-                        
-                        <div class="span7">
-                               
-                            <!-- Modal -->
-                            <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h3 id="myModalLabel">Modal header</h3>
-                            </div>
-                            <div class="modal-body">
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                            </div>
-                            <div class="modal-footer">
-                            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                            <button class="btn btn-primary">Product details</button>
-                            </div>
-                            </div>
-                        </div>
-
-                        
+                                              
                     </div>
                     
                    <div class="media well-small">
@@ -378,6 +394,7 @@ function googleTranslateElementInit() {
     <li class="active"><a href="#desc">Description</a></li>
     <li class=""><a href="#app">Application</a></li>
     <li class=""><a href="#spec">Specification</a></li>
+    <li class=""><a href="#spec">Reviews</a></li>
     
     </ul>
      
@@ -387,15 +404,7 @@ function googleTranslateElementInit() {
     <div class="tab-pane" id="spec">...</div>
     </div>
      
-    <script>
-    $(function () {
-    $('#myTab a:first').tab('show');
-    })
-        $('#myTab a').click(function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-    })
-    </script>
+    
                         </div>
                     
                 </div>
@@ -470,7 +479,15 @@ function googleTranslateElementInit() {
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-
+        <!--camera gallary-->
+<!--        <script type='text/javascript' src='js/jquery.min.js'></script>
+        <script type='text/javascript' src='js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.3.js'></script> 
+    <script type='text/javascript' src='js/camera.min.js'></script> -->
+        <!--camera gallary end-->
+        
+        
+        <script src="js/bootstrap-magnify.min.js"></script>
         <script src="js/main.js"></script>
 
         <script>
@@ -479,5 +496,28 @@ function googleTranslateElementInit() {
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+        <script>
+            
+    $(function () {
+    $('#myTab a:first').tab('show');
+//    $('.cont img#1b').hide(); 
+    $('.cont img#2b').hide(); 
+    $('.cont img#3b').hide();
+    $('.cont img').magnify();
+    
+                $('.zoomthumb img').click( function(){
+                    var t = $(this).attr("id")
+                    $('.cont img#1b').hide(); 
+                    $('.cont img#2b').hide(); 
+                    $('.cont img#3b').hide(); 
+                    $('.cont img#'+t+'b').show();  
+                });
+    })
+    
+    $('#myTab a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+    })
+    </script>
     </body>
 </html>
